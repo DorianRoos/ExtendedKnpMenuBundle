@@ -1,0 +1,36 @@
+{
+  "name":        "dorianroos/extended-knp-menu-bundle",
+  "type":        "symfony-bundle",
+  "description": "",
+  "keywords":    [
+    "Symfony2",
+    "KnpMenu"
+  ],
+  "homepage":    "https://github.com/DorianRoos/ExtendedKnpMenuBundle",
+  "license":     "MIT",
+  "authors": [
+    {
+      "name": "Dorian Roos",
+      "email": "roos.dorian@gmail.com"
+    }
+  ],
+  "require": {
+    "php":                          ">=5.3.3",
+    "symfony/framework-bundle":     "~2.3",
+    "knplabs/knp-menu-bundle":      "~2"
+  },
+
+  "autoload": {
+    "psr-0": {
+      "DorianRoos\\Symfony\\ExtendedKnpMenuBundle\\": ""
+    }
+  },
+
+  "target-dir": "DorianRoos/Symfony/ExtendedKnpMenuBundle",
+
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0"
+    }
+  }
+}
