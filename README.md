@@ -5,7 +5,7 @@ Pour créer un menu, la configuration est la même que pour le knpmenubundle nor
 
 #### Exemple :
     services:
-      alyotech_menu.main_menu:
+      menu.main_menu:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory: ["@extended_knp_menu.menu_builder", createMenu]
         arguments: [%menu.main%]
