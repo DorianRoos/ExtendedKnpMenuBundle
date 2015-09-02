@@ -1,6 +1,6 @@
 <?php
 
-namespace Alyotech\Symfony\MenuBundle\Tests\Controller;
+namespace DorianRoos\Symfony\MenuBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
