@@ -5,7 +5,7 @@ Pour créer un menu, la configuration est la même que pour le knpmenubundle nor
 
 #### Exemple :
     services:
-      extended_menu.main_menu:
+      menu.main_menu:
         class: Knp\Menu\MenuItem # the service definition requires setting the class
         factory: ["@extended_knp_menu.menu_builder", createMenu]
         arguments: [%menu.main%]
@@ -63,6 +63,23 @@ Optionnels :
             textMode: true
             text: "Google"
             uri: "http://www.google.fr"
+            
+### Attributs :
+
+Pour chaque Item il est possible de lui donner des attributs html.
+
+Il existe 3 types d'attributs: attributes, linkAttributes, childrenAttributes
+
+#### Exemple :
+    bundles:
+      textMode: true
+      text: "Bundles"
+      uri: "#"
+      linkAttributes:
+        data-toggle: "dropdown"
+        role: "button"
+        aria-haspopup: "true"
+        aria-expanded: "false"
             
 ### Afficher le menu
           

@@ -77,6 +77,19 @@ class MenuBuilder
                 !isset($menuItem['route']) ?: $menu->addChild($identifier, array('route' => $menuItem['route'], 'label' => $text));
                 (!isset($menuItem['uri']) && isset($menuItem['route'])) ?: $menu->addChild($identifier, array('uri' => $menuItem['uri'], 'label' => $text));
 
+                /** Set Attributes */
+                if(isset($menuItem['childrenAttributes'])){
+                    $menu[$identifier]->setChildrenAttributes($menuItem['childrenAttributes']);
+                }
+
+                if(isset($menuItem['linkAttributes'])){
+                    $menu[$identifier]->setLinkAttributes($menuItem['linkAttributes']);
+                }
+
+                if(isset($menuItem['attributes'])){
+                    $menu[$identifier]->setAttributes($menuItem['attributes']);
+                }
+
                 if(isset($menuItem['submenu'])){
                     $this->addMenuElement($menuItem['submenu']['contents'],$menu[$identifier]);
                 }
